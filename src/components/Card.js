@@ -12,8 +12,8 @@ const Card = () => {
         .get("https://covidnigeria.herokuapp.com/api")
         .then(res => {
         setPosts(res.data.data)
-        .catch(err => err)
-        })
+      })
+      .catch(err => err)
       
     },[]);
 
@@ -25,18 +25,18 @@ const Card = () => {
           <p className='totalConfirmedCases'>Total Confirmed Cases: <em>{posts.totalConfirmedCases}</em></p>
           <p className='totalActiveCases'>Total Active Cases: <em>{posts.totalActiveCases}</em></p>
           <p className='discharged'>Total Discharged: <em>{posts.discharged}</em></p>
-          <p className='death'>Total Deaths: <em className='last'>{posts.death}</em></p>
+          <p className='death'>Total Deaths: <em className='last_border'>{posts.death}</em></p>
         </div>
         
         <div className='card_2'>
-          {posts.states.map((state) => (
+          {posts?.states?.map((state) => (
             <div className='box'>
               <img src='/img/covid1.jpeg' alt='covid_image' />
-              <p>{`Name: ${state.state}`}</p>
-              <p>{`Confirmed Cases: ${state.confirmedCases}`}</p>
-              <p>{`Cases On Admission: ${state.casesOnAdmission}`}</p>
-              <p>{`Discharged: ${state.discharged}`}</p>
-              <p>{`Death: ${state.death}`}</p>
+              <p>Name: <em className='box_em'>{state.state}</em></p>
+              <p>Confirmed Cases: <em className='box_em'>{state.confirmedCases}</em></p>
+              <p>Cases On Admission: <em className='box_em'>{state.casesOnAdmission}</em></p>
+              <p>Discharged: <em className='box_em'>{state.discharged}</em></p>
+              <p>Death: <em className='box_em'>{state.death}</em></p>
             </div>
           ))}
         </div>

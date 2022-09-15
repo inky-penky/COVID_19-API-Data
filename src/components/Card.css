@@ -16,15 +16,37 @@ em {
     font-size: 2rem;
 }
 
-.last {
-    border-left: none;
+.card_1 p.death {
+    border-right: none;
+    
 }
 
 .card_2 {
-    margin: 3rem;
-    border: 1px solid red;
+    margin: 3rem 5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .box {
-    padding: 1rem;
+    border-radius: 0.5rem;
+    color: rgba(0, 0, 0, 0.9);
+    margin: 1rem;
+    border: 1px solid black;
+    box-shadow: 0.1rem black;
 }
+
+.box img {
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.box p {
+    padding-left: 1rem;
+}
+
+.box_em {
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
