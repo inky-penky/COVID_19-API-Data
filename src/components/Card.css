@@ -1,0 +1,30 @@
+.card_1 {
+    margin: 3rem 10rem;
+    display: flex;
+}
+
+.card_1 p {
+    padding: 0.1rem 1.5rem;
+    color: rgba(0, 0, 0, 0.7);
+    font-family: sans-serif;
+    border-right: 1px solid black;
+}
+
+em {
+    font-style: normal;
+    color: black;
+    font-size: 2rem;
+}
+
+.last {
+    border-left: none;
+}
+
+.card_2 {
+    margin: 3rem;
+    border: 1px solid red;
+}
+
+.box {
+    padding: 1rem;
+}
