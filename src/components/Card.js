@@ -27,16 +27,18 @@ const Card = () => {
           <p className='discharged'>Total Discharged: <em>{posts.discharged}</em></p>
           <p className='death'>Total Deaths: <em className='last'>{posts.death}</em></p>
         </div>
-
+        
         <div className='card_2'>
-          <div className='box'>
-            <img src='/img/covid1.jpeg' alt='covid_image' />
-            {/* <p className='state' key={posts.id}>{posts.states.state}</p>
-            <p className='confirmedCases'>{posts.states.confirmedCases}</p>
-            <p className='casesOnAdmission'>{posts.states.casesOnAdmission}</p>
-            <p className='discharged'>{posts.states.discharged}</p>
-            <p className='death'>{posts.states.death}</p> */}
-          </div>
+          {posts.states.map((state) => (
+            <div className='box'>
+              <img src='/img/covid1.jpeg' alt='covid_image' />
+              <p>{`Name: ${state.state}`}</p>
+              <p>{`Confirmed Cases: ${state.confirmedCases}`}</p>
+              <p>{`Cases On Admission: ${state.casesOnAdmission}`}</p>
+              <p>{`Discharged: ${state.discharged}`}</p>
+              <p>{`Death: ${state.death}`}</p>
+            </div>
+          ))}
         </div>
     </div>
   )
