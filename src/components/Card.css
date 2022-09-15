@@ -1,6 +1,7 @@
 .card_1 {
     margin: 3rem 10rem;
     display: flex;
+    justify-content: center;
 }
 
 .card_1 p {
@@ -31,9 +32,8 @@ em {
 .box {
     border-radius: 0.5rem;
     color: rgba(0, 0, 0, 0.9);
-    margin: 1rem;
-    border: 1px solid black;
-    box-shadow: 0.1rem black;
+    margin: 1.5rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
 }
 
 .box img {
@@ -50,3 +50,14 @@ em {
     font-family: sans-serif;
 }
 
+@media all and (max-width: 1000px) {
+
+    .card_1 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card_1 p{
+        border-right: none;
+    }
+}
