@@ -32,7 +32,7 @@ const Card = () => {
           {posts?.states?.map((state) => (
             <div className='box'>
               <img src='/img/covid1.jpeg' alt='covid_image' />
-              <p>Name: <em className='box_em'>{state.state}</em></p>
+              <p>State: <em className='box_em'>{state.state}</em></p>
               <p>Confirmed Cases: <em className='box_em'>{state.confirmedCases}</em></p>
               <p>Cases On Admission: <em className='box_em'>{state.casesOnAdmission}</em></p>
               <p>Discharged: <em className='box_em'>{state.discharged}</em></p>
